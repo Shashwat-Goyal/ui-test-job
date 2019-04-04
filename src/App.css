@@ -34,10 +34,10 @@
 }
 
 .theme-bg {
-  background-color: #0e0e0e;
+  background-color: #090908;
 }
 .bg-dark {
-  background: #0e0e0e !important;
+  background: #090908 !important;
 }
 
 .ft-white {
@@ -158,4 +158,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+.form-control{
+  border-radius: 0;
+  border: 0;
+}
+.charts-btn{
+  border: 2px solid #00152d;
+  color:#a5a5a5;
+  font-size: 17px;
+}
+.badge-dark{
+  background: #141618;
+  color:#bababa !important;
+}
+.placeholder_paragraph{
+  color:#7e7e7e;
 }

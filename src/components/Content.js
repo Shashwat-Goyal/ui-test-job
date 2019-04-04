@@ -189,9 +189,9 @@ export default class Content extends React.Component {
                                             <p className="ft-white">Run select use cases for</p>
                                         </Col>
                                         <Col sm={6}>
-                                            <Button block variant="outline-dark">Buy side PE</Button>
-                                            <Button block variant="outline-dark">Buy side Corporate</Button>
-                                            <Button block variant="outline-dark">Sell side</Button>
+                                            <Button className='charts-btn' block variant="outline-dark">Buy side PE</Button>
+                                            <Button className='charts-btn' block variant="outline-dark">Buy side Corporate</Button>
+                                            <Button className='charts-btn' block variant="outline-dark">Sell side</Button>
                                         </Col>
                                     </Row>
                                 </Col>
@@ -205,7 +205,7 @@ export default class Content extends React.Component {
                         </div>
                         <div className="theme-bg industry-container">
                             <h4 className="ft-white">Discover the popular sectors we track</h4>
-                            <p>{dummyText} consectetur</p>
+                            <p className='placeholder_paragraph'>{dummyText} consectetur</p>
                             {
                                 industries.map((industry, i) => {
                                     return <Badge key={i} pill variant="dark">

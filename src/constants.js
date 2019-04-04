@@ -16,3 +16,11 @@ export const tags = [
     'Potential acquirers',
     'Fast path'
 ];
+
+const colors = [
+    { bg: '#221620', color: '#dd7fcc'},
+    { bg: '#20140e', color: '#cb7338'},
+    { bg: '#0c1c10', color: '#32b654'},
+    { bg: '#200e10', color: '#c93b44'},
+    { bg: '#111722', color: '#568bd7'},
+]
