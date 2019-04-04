@@ -10,7 +10,7 @@ export default ({icon='', name='', categories=[]}) => {
             <p><i className={icon}></i> <span className="ft-white">{name}</span> <span className="pull-right ft-12">VIEW INDUSTRIES</span></p>
             {
                 categories.map((tag, i) => {
-                    return <Badge variant="secondary">{tag}</Badge>
+                    return <Badge variant="dark">{tag}</Badge>
                 })
             }
         </div>

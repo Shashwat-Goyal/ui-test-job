@@ -168,7 +168,7 @@ export default class Content extends React.Component {
                                     <div className="mt-10">
                                         {
                                             tags.map(tag => {
-                                                return <Badge pill variant="dark">{tag}</Badge>
+                                                return <Badge pill className={tag.className}>{tag.name}</Badge>
                                             })
                                         }
                                     </div>
@@ -196,10 +196,21 @@ export default class Content extends React.Component {
                                     </Row>
                                 </Col>
                                 <Col sm={6}>
-                                    <div className="theme-bg">
-                                        <img src={BarChart} height={120} />
-                                        <p className="ft-white">Top Charts</p>
-                                    </div>
+                                    <Row className="theme-bg">
+                                        <Col sm={4}>
+                                            <img src={BarChart} height={120} />
+                                            <p className="ft-white">Top Charts</p>
+                                        </Col>
+                                        <Col sm={8}>
+                                            <Button size="sm" className='charts-btn' variant="outline-dark">Acquirers</Button>
+                                            <Button size="sm" className='charts-btn' variant="outline-dark">Founders</Button>
+                                            <Button size="sm" className='charts-btn' variant="outline-dark">Board members</Button>
+                                            <Button size="sm" className='charts-btn' variant="outline-dark">Investment partners</Button>
+                                            <Button size="sm" className='charts-btn' variant="outline-dark">Corporate VCs</Button>
+                                            <Button size="sm" className='charts-btn' variant="outline-dark">Smart money investors</Button>
+                                            <Button size="sm" className='charts-btn' variant="outline-dark">Private Equity</Button>
+                                        </Col>
+                                    </Row>
                                 </Col>
                             </Row>
                         </div>

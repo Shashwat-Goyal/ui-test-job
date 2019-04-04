@@ -61,11 +61,11 @@
 }
 
 .nomargin {
-  margin: 0
+  margin: 0;
 }
 
 .nopadding {
-  padding: 0
+  padding: 0;
 }
 
 .form-control:focus {
@@ -149,6 +149,27 @@
   align-items: center;
 }
 
+.profile-tag {
+  background: #221620;
+  color: #dd7fcc !important;
+}
+.comparables-tag {
+  background: #20140e;
+  color: #cb7338 !important;
+}
+.strategic-tag {
+  background: #0c1c10;
+  color: #32b654 !important;
+}
+.potential-tag {
+  background: #200e10;
+  color: #c93b44 !important;
+}
+.fast-tag {
+  background: #111722;
+  color: #568bd7 !important;
+}
+
 /* #484848
 #9A9A9A */
 @keyframes App-logo-spin {
@@ -159,19 +180,20 @@
     transform: rotate(360deg);
   }
 }
-.form-control{
+.form-control {
   border-radius: 0;
   border: 0;
 }
-.charts-btn{
+.charts-btn {
   border: 2px solid #00152d;
-  color:#a5a5a5;
-  font-size: 17px;
+  color: #a5a5a5;
+  font-size: 12px;
+  margin: 5px;
 }
-.badge-dark{
+.badge-dark {
   background: #141618;
-  color:#bababa !important;
+  color: #bababa !important;
 }
-.placeholder_paragraph{
-  color:#7e7e7e;
+.placeholder_paragraph {
+  color: #7e7e7e;
 }
