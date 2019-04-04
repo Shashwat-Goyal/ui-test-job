@@ -6,7 +6,7 @@ import {
 export default ({question, tag}) => {
     return (
         <div className="faq">
-            <p>{question} <span className="faq-tag">{tag}</span></p>
+            <p className="nomargin">{question} <span className="faq-tag"><Badge pill variant="dark">{tag}</Badge></span></p>
         </div>
     )
 }

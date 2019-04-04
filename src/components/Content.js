@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import {
     Row,
     Col,
     Container,
     Badge,
-    Nav
+    Nav,
+    Button
 } from 'react-bootstrap';
 import SearchFilter from './SearchFilter';
-import { dummyText, faqs } from '../constants';
+import { dummyText, faqs, tags } from '../constants';
 import Industries from './Industries';
 import FAQ from './FAQ';
+import ArrowChart from '../arrow-chart.png';
+import BarChart from '../bar-chart.png';
 
 export default class Content extends React.Component {
     render() {
@@ -56,7 +59,7 @@ export default class Content extends React.Component {
                     'Artificial Intelligence',
                     'Data Management & Analytics'
                 ],
-                icon: ''
+                icon: 'fa fa-desktop'
             },
             {
                 name: 'Internet of Things', 
@@ -85,7 +88,7 @@ export default class Content extends React.Component {
                     'RegTech',
                     'WealthTech'
                 ],
-                icon: ''
+                icon: 'fa fa-desktop'
             },
             {
                 name: 'Industrial Tech', 
@@ -108,7 +111,7 @@ export default class Content extends React.Component {
                     'Retail Tech',
                     'Ecommerce Tech'
                 ],
-                icon: ''
+                icon: 'fa fa-desktop'
             },
             {
                 name: 'Travel and Hospitality', 
@@ -116,7 +119,8 @@ export default class Content extends React.Component {
                     'Travel Tech',
                     'Transport Tech',
                     'Hospitality Tech'
-                ]
+                ],
+                icon: 'fa fa-desktop'
             },
             {
                 name: 'Other verticals', 
@@ -125,7 +129,7 @@ export default class Content extends React.Component {
                     'Legal Tech',
                     'Ag Tech'
                 ],
-                icon: ''
+                icon: 'fa fa-desktop'
             }
         ]
 
@@ -134,8 +138,8 @@ export default class Content extends React.Component {
                 <Row>
                     <Col sm={9}>
                         <div className="theme-bg industry-container">
-                            <p className="ft-white">Choose from our smart filters</p>
-                            <p className="ft-12">{dummyText} consectetur</p>
+                            <h4 className="ft-white">Choose from our smart filters</h4>
+                            <p>{dummyText} consectetur</p>
                             <Nav justify variant="tabs" defaultActiveKey="/home">
                                 <Nav.Item>
                                     <Nav.Link eventKey="company">Company</Nav.Link>
@@ -160,16 +164,48 @@ export default class Content extends React.Component {
                                 </Nav.Item>
                             </Nav>
                             <Row>
-                            {
-                                faqs.map((faq, i) => {
-                                    return <Col sm={6} key={i}><FAQ {...faq} /></Col>
-                                })
-                            }
+                                <Fragment>
+                                    <div className="mt-10">
+                                        {
+                                            tags.map(tag => {
+                                                return <Badge pill variant="dark">{tag}</Badge>
+                                            })
+                                        }
+                                    </div>
+                                    {
+                                        faqs.map((faq, i) => {
+                                            return <Col sm={6} key={i}><FAQ {...faq} /></Col>
+                                        })
+                                    }
+                                </Fragment>
+                            </Row>
+                        </div>
+                        <div className="charts-container">
+                            <Row>
+                                <Col sm={6}>
+                                    <Row className="theme-bg">
+                                        <Col sm={6}>
+                                            <img src={ArrowChart} height={120} />
+                                            <p className="ft-white">Run select use cases for</p>
+                                        </Col>
+                                        <Col sm={6}>
+                                            <Button block variant="outline-dark">Buy side PE</Button>
+                                            <Button block variant="outline-dark">Buy side Corporate</Button>
+                                            <Button block variant="outline-dark">Sell side</Button>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                                <Col sm={6}>
+                                    <div className="theme-bg">
+                                        <img src={BarChart} height={120} />
+                                        <p className="ft-white">Top Charts</p>
+                                    </div>
+                                </Col>
                             </Row>
                         </div>
                         <div className="theme-bg industry-container">
-                            <p className="ft-white">Discover the popular sectors we track</p>
-                            <p className="ft-12">{dummyText} consectetur</p>
+                            <h4 className="ft-white">Discover the popular sectors we track</h4>
+                            <p>{dummyText} consectetur</p>
                             {
                                 industries.map((industry, i) => {
                                     return <Badge key={i} pill variant="dark">
@@ -178,13 +214,24 @@ export default class Content extends React.Component {
                                 })
                             }
                             <Row>
-                                {
-                                    industries.map((industry, i) => {
-                                        return <Col key={i} sm={6}>
-                                            <Industries {...industry} />
-                                        </Col>
-                                    })
-                                }
+                                <Col sm={6} className="nopadding">
+                                    {
+                                        industries.filter((industry, i) => i%2 == 0).map((industry, i) => {
+                                            return <Col key={i} sm={12}>
+                                                <Industries {...industry} />
+                                            </Col>
+                                        })
+                                    }
+                                </Col>
+                                <Col sm={6} className="nopadding">
+                                    {
+                                        industries.filter((industry, i) => i%2 != 0).map((industry, i) => {
+                                            return <Col key={i} sm={12}>
+                                                <Industries {...industry} />
+                                            </Col>
+                                        })
+                                    }
+                                </Col>
                             </Row>
                         </div>
                     </Col>

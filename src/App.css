@@ -60,6 +60,14 @@
   border: none;
 }
 
+.nomargin {
+  margin: 0
+}
+
+.nopadding {
+  padding: 0
+}
+
 .form-control:focus {
   background: #0e0e0e;
   box-shadow: none;
@@ -74,7 +82,7 @@
   background: #24080f;
   color: #b50a34;
   padding: 5px;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 .search-filter .subtitle {
   color: #484848;
@@ -94,6 +102,11 @@
   border: 1px solid #484848;
   border-radius: 2px;
   margin: 10px 0;
+}
+
+.industry-section i {
+  color: #b50a34;
+  margin-right: 5px;
 }
 
 .content .nav.nav-tabs {
@@ -121,12 +134,19 @@
   font-size: 12px;
   font-weight: 400;
   color: #fff;
+  cursor: pointer;
 }
 
 .faq {
   margin: 10px 0;
   padding: 10px;
   border: 1px solid #484848;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* #484848

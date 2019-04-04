@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {
-    Form
+    Form,
+    Col,
+    Row
 } from 'react-bootstrap';
 
 export default class SearchFilter extends Component {
@@ -14,21 +16,27 @@ export default class SearchFilter extends Component {
                     <i className={icon}></i>
                 </span>{title}</p>
                 <p className="mb-10 subtitle">{subTitle}</p>
-                {type !== 'select' ? 
-                    <Form.Group controlId="exampleForm.ControlInput1">
-                        <Form.Control className="theme-bg" type={type} placeholder={placeholder} />
-                    </Form.Group>
-                    : <Form.Group controlId="exampleForm.ControlSelect1">
-                        <Form.Control className="theme-bg" as="select">
-                          <option value="">{placeholder}</option>
-                          <option value="option 1">1</option>
-                          <option value="option 2">2</option>
-                          <option value="option 3">3</option>
-                          <option value="option 4">4</option>
-                        </Form.Control>
-                      </Form.Group>
-                }
-                <span className="theme-bg"><i className="ft-white fa fa-chevron-right"></i></span>
+                <Row>
+                    <Col xs={10}>
+                        {type !== 'select' ? 
+                            <Form.Group className="nomargin" controlId="exampleForm.ControlInput1">
+                                <Form.Control className="theme-bg" type={type} placeholder={placeholder} />
+                            </Form.Group>
+                            : <Form.Group className="nomargin" controlId="exampleForm.ControlSelect1">
+                                <Form.Control className="theme-bg" as="select">
+                                <option value="">{placeholder}</option>
+                                <option value="option 1">1</option>
+                                <option value="option 2">2</option>
+                                <option value="option 3">3</option>
+                                <option value="option 4">4</option>
+                                </Form.Control>
+                            </Form.Group>
+                        }
+                    </Col>
+                    <Col xs={2} className="justify-center">
+                        <span className="theme-bg"><i className="ft-white ft-12 fa fa-chevron-right"></i></span>
+                    </Col>
+                </Row>   
             </div>
         )
     }
