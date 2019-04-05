@@ -1,14 +1,12 @@
-.App {
+body {
   font-family: "Roboto", sans-serif;
   background: #000;
 }
-
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -19,65 +17,51 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .App-link {
   color: #61dafb;
 }
-
 .logo .logo-info {
   font-size: 9px;
   display: block;
 }
-
 .user-name {
   margin-left: 20px;
 }
-
 .theme-bg {
   background-color: #090908;
 }
 .bg-dark {
   background: #090908 !important;
 }
-
 .ft-white {
   color: #fff;
 }
-
 .ft-12 {
   font-size: 12px;
 }
-
 .mb-10 {
   margin-bottom: 10px;
 }
-
 .mt-10 {
   margin-top: 10px;
 }
-
 .noborder {
   border: none;
 }
-
 .nomargin {
   margin: 0;
 }
-
 .nopadding {
   padding: 0;
 }
-
 .form-control:focus {
   background: #0e0e0e;
   box-shadow: none;
 }
-
 .search-filter {
   margin: 20px 0;
   padding: 10px;
 }
-
 .search-filter .icon {
   background: #24080f;
   color: #b50a34;
@@ -87,47 +71,39 @@
 .search-filter .subtitle {
   color: #484848;
 }
-
 .search-filter .form-control {
   border-color: #484848;
 }
-
 .industry-container {
   padding: 10px;
   margin: 20px 0;
 }
-
 .industry-section {
   padding: 10px;
   border: 1px solid #484848;
   border-radius: 2px;
   margin: 10px 0;
 }
-
 .industry-section i {
   color: #b50a34;
   margin-right: 5px;
 }
-
 .content .nav.nav-tabs {
   border-color: #2f2f2f;
 }
-
 .content .nav.nav-tabs .nav-item a {
   color: #5e5e5e;
+  padding: .5rem 10px;
 }
-
 .content .nav.nav-tabs .nav-item .nav-link:focus,
 .content .nav.nav-tabs .nav-item .nav-link:hover {
   border: none;
   outline: 0;
 }
-
 .content .nav.nav-tabs .nav-item .nav-link.active {
   background-color: #0e0e0e;
   border: none;
 }
-
 .content .badge {
   margin: 5px;
   padding: 8px 15px;
@@ -136,19 +112,16 @@
   color: #fff;
   cursor: pointer;
 }
-
 .faq {
   margin: 10px 0;
   padding: 10px;
   border: 1px solid #484848;
 }
-
 .justify-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .profile-tag {
   background: #221620;
   color: #dd7fcc !important;
@@ -196,4 +169,50 @@
 }
 .placeholder_paragraph {
   color: #7e7e7e;
+}
+
+
+/* Media Queries (Responsive View) Css Here */
+@media(max-width:1199px){
+  .content .nav.nav-tabs .nav-item a {
+    padding: .5rem 5px;
+    font-size: 14px;
+  }
+}
+@media(max-width:767px){  
+  .nav-justified .nav-item {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    width: 25%;
+    display: inline-block;
+    float: left;
+  }
+  .user-name {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+  .cus-user-sec img {
+    width: 20px;
+  }
+  .cus-user-sec {
+    padding-left: 0;
+  }
+}
+@media (max-width: 575px){
+  nav.navbar{
+    display: inline-block;
+    width: 100%;
+    padding: 0px;
+  }
+  .text-right.cus-user-sec {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    z-index: 999;
+  }
+}
+@media (max-width: 420px){
+  .nav-justified .nav-item {
+    width: 50%;
+  }
 }

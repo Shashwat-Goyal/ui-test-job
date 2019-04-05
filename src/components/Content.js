@@ -136,8 +136,8 @@ export default class Content extends React.Component {
         return (
             <Container className="content">
                 <Row>
-                    <Col sm={9}>
-                        <div className="theme-bg industry-container">
+                    <Col lg={9} md={12} sm={12} xs={12}>
+                        <div className="theme-bg industry-container text-center">
                             <h4 className="ft-white">Choose from our smart filters</h4>
                             <p>{dummyText} consectetur</p>
                             <Nav justify variant="tabs" defaultActiveKey="/home">
@@ -174,7 +174,7 @@ export default class Content extends React.Component {
                                     </div>
                                     {
                                         faqs.map((faq, i) => {
-                                            return <Col sm={6} key={i}><FAQ {...faq} /></Col>
+                                            return <Col sm={6} xs={12} key={i}><FAQ {...faq} /></Col>
                                         })
                                     }
                                 </Fragment>
@@ -182,26 +182,26 @@ export default class Content extends React.Component {
                         </div>
                         <div className="charts-container">
                             <Row>
-                                <Col sm={6}>
-                                    <Row className="theme-bg">
-                                        <Col sm={6}>
+                                <Col md={6} sm={12} xs={12}>
+                                    <Row className="theme-bg text-center">
+                                        <Col md={6} sm={6} xs={12}>
                                             <img src={ArrowChart} height={120} />
                                             <p className="ft-white">Run select use cases for</p>
                                         </Col>
-                                        <Col sm={6}>
+                                        <Col md={6} sm={6} xs={12}>
                                             <Button className='charts-btn' block variant="outline-dark">Buy side PE</Button>
                                             <Button className='charts-btn' block variant="outline-dark">Buy side Corporate</Button>
                                             <Button className='charts-btn' block variant="outline-dark">Sell side</Button>
                                         </Col>
                                     </Row>
                                 </Col>
-                                <Col sm={6}>
-                                    <Row className="theme-bg">
-                                        <Col sm={4}>
+                                <Col md={6} sm={12} xs={12}>
+                                    <Row className="theme-bg text-center">
+                                        <Col md={4} sm={12} xs={12}>
                                             <img src={BarChart} height={120} />
                                             <p className="ft-white">Top Charts</p>
                                         </Col>
-                                        <Col sm={8}>
+                                        <Col md={8} sm={12} xs={12}>
                                             <Button size="sm" className='charts-btn' variant="outline-dark">Acquirers</Button>
                                             <Button size="sm" className='charts-btn' variant="outline-dark">Founders</Button>
                                             <Button size="sm" className='charts-btn' variant="outline-dark">Board members</Button>
@@ -225,7 +225,7 @@ export default class Content extends React.Component {
                                 })
                             }
                             <Row>
-                                <Col sm={6} className="nopadding">
+                                <Col md={6} sm={12} xs={12} className="nopadding">
                                     {
                                         industries.filter((industry, i) => i%2 == 0).map((industry, i) => {
                                             return <Col key={i} sm={12}>
@@ -234,7 +234,7 @@ export default class Content extends React.Component {
                                         })
                                     }
                                 </Col>
-                                <Col sm={6} className="nopadding">
+                                <Col md={6} sm={12} xs={12} className="nopadding">
                                     {
                                         industries.filter((industry, i) => i%2 != 0).map((industry, i) => {
                                             return <Col key={i} sm={12}>
@@ -246,7 +246,7 @@ export default class Content extends React.Component {
                             </Row>
                         </div>
                     </Col>
-                    <Col sm={3}>
+                    <Col lg={3} md={12} sm={12} xs={12}>
                         {filters.map(filter => {
                             return <SearchFilter 
                                 {...filter}
