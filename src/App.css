@@ -75,7 +75,7 @@ body {
   border-color: #484848;
 }
 .industry-container {
-  padding: 10px;
+  padding: 10px 0;
   margin: 20px 0;
 }
 .industry-section {
@@ -103,6 +103,7 @@ body {
 .content .nav.nav-tabs .nav-item .nav-link.active {
   background-color: #0e0e0e;
   border: none;
+  border-bottom: 2px solid #b50a34;
 }
 .content .badge {
   margin: 5px;
@@ -170,7 +171,9 @@ body {
 .placeholder_paragraph {
   color: #7e7e7e;
 }
-
+.margin-set {
+  margin-top: -40px;
+}
 
 /* Media Queries (Responsive View) Css Here */
 @media(max-width:1199px){
@@ -196,6 +199,9 @@ body {
   }
   .cus-user-sec {
     padding-left: 0;
+  }
+  .res-text-center{
+    text-align: center;
   }
 }
 @media (max-width: 575px){

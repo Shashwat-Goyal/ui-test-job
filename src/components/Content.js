@@ -137,10 +137,10 @@ export default class Content extends React.Component {
             <Container className="content">
                 <Row>
                     <Col lg={9} md={12} sm={12} xs={12}>
-                        <div className="theme-bg industry-container text-center">
+                        <div className="theme-bg industry-container">
                             <h4 className="ft-white">Choose from our smart filters</h4>
                             <p>{dummyText} consectetur</p>
-                            <Nav justify variant="tabs" defaultActiveKey="/home">
+                            <Nav justify variant="tabs" defaultActiveKey="company">
                                 <Nav.Item>
                                     <Nav.Link eventKey="company">Company</Nav.Link>
                                 </Nav.Item>
@@ -154,13 +154,13 @@ export default class Content extends React.Component {
                                     <Nav.Link eventKey="sector">Sector</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="sector">Industry</Nav.Link>
+                                    <Nav.Link eventKey="industry">Industry</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="sector">Sub-Industry</Nav.Link>
+                                    <Nav.Link eventKey="sub-industry">Sub-Industry</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="sector">Region</Nav.Link>
+                                    <Nav.Link eventKey="region">Region</Nav.Link>
                                 </Nav.Item>
                             </Nav>
                             <Row>
@@ -182,24 +182,24 @@ export default class Content extends React.Component {
                         </div>
                         <div className="charts-container">
                             <Row>
-                                <Col md={6} sm={12} xs={12}>
-                                    <Row className="theme-bg text-center">
-                                        <Col md={6} sm={6} xs={12}>
+                                <Col lg={6} md={12} sm={12} xs={12}>
+                                    <Row className="theme-bg res-text-center">
+                                        <Col md={6} sm={12} xs={12}>
                                             <img src={ArrowChart} height={120} />
-                                            <p className="ft-white">Run select use cases for</p>
+                                            <p className="ft-white margin-set">Run select use cases for</p>
                                         </Col>
-                                        <Col md={6} sm={6} xs={12}>
+                                        <Col md={6} sm={12} xs={12}>
                                             <Button className='charts-btn' block variant="outline-dark">Buy side PE</Button>
                                             <Button className='charts-btn' block variant="outline-dark">Buy side Corporate</Button>
                                             <Button className='charts-btn' block variant="outline-dark">Sell side</Button>
                                         </Col>
                                     </Row>
                                 </Col>
-                                <Col md={6} sm={12} xs={12}>
-                                    <Row className="theme-bg text-center">
+                                <Col lg={6} md={12} sm={12} xs={12}>
+                                    <Row className="theme-bg res-text-center">
                                         <Col md={4} sm={12} xs={12}>
                                             <img src={BarChart} height={120} />
-                                            <p className="ft-white">Top Charts</p>
+                                            <p className="ft-white margin-set">Top Charts</p>
                                         </Col>
                                         <Col md={8} sm={12} xs={12}>
                                             <Button size="sm" className='charts-btn' variant="outline-dark">Acquirers</Button>
