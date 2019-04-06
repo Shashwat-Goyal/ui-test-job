@@ -93,7 +93,7 @@ body {
 }
 .content .nav.nav-tabs .nav-item a {
   color: #5e5e5e;
-  padding: .5rem 10px;
+  padding: 0.5rem 10px;
 }
 .content .nav.nav-tabs .nav-item .nav-link:focus,
 .content .nav.nav-tabs .nav-item .nav-link:hover {
@@ -175,14 +175,36 @@ body {
   margin-top: -40px;
 }
 
+/* Slider CSS */
+
+.faq-slider .slick-dots {
+  text-align: left;
+  bottom: 0px;
+  left: 10px;
+}
+
+.faq-slider .slick-dots li {
+  margin: 0;
+}
+
+.faq-slider .slick-dots li.slick-active button:before {
+  color: #c93b44;
+}
+
+.faq-slider .slick-dots li button:before {
+  color: #ccc;
+}
+
+/* Slider CSS end */
+
 /* Media Queries (Responsive View) Css Here */
-@media(max-width:1199px){
+@media (max-width: 1199px) {
   .content .nav.nav-tabs .nav-item a {
-    padding: .5rem 5px;
+    padding: 0.5rem 5px;
     font-size: 14px;
   }
 }
-@media(max-width:767px){  
+@media (max-width: 767px) {
   .nav-justified .nav-item {
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
@@ -200,12 +222,12 @@ body {
   .cus-user-sec {
     padding-left: 0;
   }
-  .res-text-center{
+  .res-text-center {
     text-align: center;
   }
 }
-@media (max-width: 575px){
-  nav.navbar{
+@media (max-width: 575px) {
+  nav.navbar {
     display: inline-block;
     width: 100%;
     padding: 0px;
@@ -217,7 +239,7 @@ body {
     z-index: 999;
   }
 }
-@media (max-width: 420px){
+@media (max-width: 420px) {
   .nav-justified .nav-item {
     width: 50%;
   }

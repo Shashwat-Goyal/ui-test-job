@@ -5,7 +5,8 @@ import {
     Container,
     Badge,
     Nav,
-    Button
+    Button,
+    Carousel
 } from 'react-bootstrap';
 import SearchFilter from './SearchFilter';
 import { dummyText, faqs, tags } from '../constants';
@@ -13,6 +14,7 @@ import Industries from './Industries';
 import FAQ from './FAQ';
 import ArrowChart from '../arrow-chart.png';
 import BarChart from '../bar-chart.png';
+import Slider from 'react-slick';
 
 export default class Content extends React.Component {
     render() {
@@ -133,6 +135,16 @@ export default class Content extends React.Component {
             }
         ]
 
+        var settings = {
+            arrows: false,
+            dots: true,
+            infinite: false,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            className: 'faq-slider'
+        };
+
         return (
             <Container className="content">
                 <Row>
@@ -165,25 +177,36 @@ export default class Content extends React.Component {
                             </Nav>
                             <Row>
                                 <Fragment>
-                                    <div className="mt-10">
+                                    <div className="mt-10 col-12">
                                         {
                                             tags.map(tag => {
                                                 return <Badge pill className={tag.className}>{tag.name}</Badge>
                                             })
                                         }
                                     </div>
-                                    {
-                                        faqs.map((faq, i) => {
-                                            return <Col sm={6} xs={12} key={i}><FAQ {...faq} /></Col>
-                                        })
-                                    }
+                                    <div className="col-12">
+                                        <Slider {...settings}>
+                                            {
+                                                [...new Array(4)].map(item => (<div>
+                                                    <Row className="nomargin mb-4">
+                                                        {
+                                                            faqs.map((faq, i) => {
+                                                                return <Col sm={6} xs={12} key={i}><FAQ {...faq} /></Col>
+                                                            })
+                                                        }
+                                                    </Row>
+                                                    </div>
+                                                ))
+                                            }
+                                        </Slider>
+                                    </div>
                                 </Fragment>
                             </Row>
                         </div>
                         <div className="charts-container">
                             <Row>
                                 <Col lg={6} md={12} sm={12} xs={12}>
-                                    <Row className="theme-bg res-text-center">
+                                    <Row className="nomargin theme-bg res-text-center">
                                         <Col md={6} sm={12} xs={12}>
                                             <img src={ArrowChart} height={120} />
                                             <p className="ft-white margin-set">Run select use cases for</p>
@@ -196,12 +219,12 @@ export default class Content extends React.Component {
                                     </Row>
                                 </Col>
                                 <Col lg={6} md={12} sm={12} xs={12}>
-                                    <Row className="theme-bg res-text-center">
+                                    <Row className="nomargin theme-bg res-text-center">
                                         <Col md={4} sm={12} xs={12}>
                                             <img src={BarChart} height={120} />
                                             <p className="ft-white margin-set">Top Charts</p>
                                         </Col>
-                                        <Col md={8} sm={12} xs={12}>
+                                        <Col md={8} sm={12} xs={12} className="nopadding">
                                             <Button size="sm" className='charts-btn' variant="outline-dark">Acquirers</Button>
                                             <Button size="sm" className='charts-btn' variant="outline-dark">Founders</Button>
                                             <Button size="sm" className='charts-btn' variant="outline-dark">Board members</Button>
