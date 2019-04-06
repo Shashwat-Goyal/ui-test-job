@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Live Demo
+
+To checkout the live demo, https://stupefied-hypatia-4ea3b0.netlify.com/
+
 ## Available Scripts
 
 In the project directory, you can run:

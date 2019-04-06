@@ -24,11 +24,11 @@ export default class SearchFilter extends Component {
                             </Form.Group>
                             : <Form.Group className="nomargin" controlId="exampleForm.ControlSelect1">
                                 <Form.Control className="theme-bg" as="select">
-                                <option value="">{placeholder}</option>
-                                <option value="option 1">1</option>
-                                <option value="option 2">2</option>
-                                <option value="option 3">3</option>
-                                <option value="option 4">4</option>
+                                    <option value="">{placeholder}</option>
+                                    <option value="option 1">1</option>
+                                    <option value="option 2">2</option>
+                                    <option value="option 3">3</option>
+                                    <option value="option 4">4</option>
                                 </Form.Control>
                             </Form.Group>
                         }
